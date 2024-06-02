@@ -1,0 +1,13 @@
+<div class="container">
+    <img src="https://lh3.googleusercontent.com/a/ACg8ocIo63bqELmHt430SAoG19iJ3FOdA_aAQhYRGQRrh2fCaNzDDuE=s360-c-no" alt="Placeholder Image" class="profile-image">
+    <div class="center">
+        <h1>Login To TeErAnOnZ</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm()">
+            <label for="username">Username</label>
+            <input type="text" id="username" formControlName="username" placeholder="Enter your username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password" placeholder="Enter your password" required>
+            <button type="submit" [disabled]="!loginForm.valid">Login</button>
+        </form>            
+    </div>
+</div>

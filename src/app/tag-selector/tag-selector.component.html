@@ -1,0 +1,6 @@
+<ul class="navbar-nav">
+    <li class="nav-item" *ngFor="let tag of tags">
+      <a class="nav-link" (click)="selectTag(tag)">{{ tag | titlecase }}</a>
+    </li>
+  </ul>
+  

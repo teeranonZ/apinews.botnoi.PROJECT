@@ -1,0 +1,151 @@
+
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    margin: 10px auto;
+    width: 300px; 
+    height: auto; 
+  }
+  
+  .form-container {
+    width: 90%;
+    max-width: 400px;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(255, 255, 255);
+    background-image: url('https://img.freepik.com/free-photo/abstract-dark-background-with-flowing-colouful-waves_1048-13124.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .col {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  
+  .form-header {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+  }
+  
+  .form-header h1 {
+    margin: 0;
+    font-size: 2.0em;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  label,
+h1,
+.error-message,
+.success-message {
+    color: #ffffff; /* ใช้สีขาวสำหรับตัวหนังสือในฟอร์ม */
+}
+  
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .button-container button {
+    width: 48%; /* ให้ปุ่มมีความกว้างเท่ากับครึ่งหนึ่งของพื้นที่ที่สามารถใช้ได้ */
+  }
+  
+  
+  
+  .button-container button[type="button"] {
+    background-color: #ff0000; /* เปลี่ยนสีปุ่ม "ยกเลิก" เป็นสีแดง */
+  }
+  
+  .button-container button {
+    width: 48%; /* ให้ปุ่มมีความกว้างเท่ากับครึ่งหนึ่งของพื้นที่ที่สามารถใช้ได้ */
+  }
+  
+  .button-container button[type="submit"] {
+    background-color: #59CE8F; /* ปรับสีของปุ่ม "สมัคร" ให้เป็นสีเขียว */
+  }
+  
+  button {
+    width: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #59CE8F;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #ffffff;
+    cursor: not-allowed;
+  }
+  
+  button + button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  .success-message {
+    color: green;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .form-container {
+        width: 100%;
+        padding: 15px;
+        .logo {
+          display: none;
+        }
+    }
+  
+    .form-header h1 {
+        font-size: 1.5em;
+    }
+  
+    .col {
+        flex: 1 0 100%;
+        margin-right: 0;
+    }
+  
+    button {
+        width: 100%;
+    }
+  
+    button + button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+  }
+  

@@ -1,0 +1,63 @@
+<div class="form-container">
+    <img src="https://t4.ftcdn.net/jpg/06/50/17/81/360_F_650178114_WCvMncO2Hhq6qhs2iiwq3i89n7NUlItn.jpg" alt="Logo" class="logo">
+    <div class="form-header">
+        <h1>REGISTERFORM ลงทะเบียน</h1>
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col">
+                <label for="firstname">ชื่อจริง</label>
+                <input type="text" id="firstname" name="firstname" formControlName="firstname" placeholder="กรุณากรอกชื่อจริง" required>
+            </div>
+            <div class="col">
+                <label for="lastname">นามสกุล</label>
+                <input type="text" id="lastname" name="lastname" formControlName="lastname" placeholder="กรุณากรอกนามสกุล">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="age">อายุ</label>
+                <input type="text" id="age" name="age" formControlName="age" placeholder="กรุณากรอกอายุ (ตัวเลขเท่านั้น)" pattern="\d{1,3}">
+            </div>
+            <div class="col">
+                <label for="phone">เบอร์โทร</label>
+                <input type="tel" id="phone" name="phone" formControlName="phone" placeholder="กรุณากรอกเบอร์โทรศัพท์ (10 หลัก)" pattern="\d{10}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="gender">เพศ</label>
+                <select id="gender" name="gender" formControlName="gender">
+                    <option value="male">ชาย</option>
+                    <option value="female">หญิง</option>
+                    <option value="other">อื่นๆ</option>
+                </select>                    
+            </div>
+            <div class="col">
+                <label for="email">อีเมล</label>
+                <input type="email" id="email" name="email" formControlName="email" placeholder="กรุณากรอกอีเมลที่ถูกต้อง" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="password">รหัสผ่าน</label>
+                <input type="password" id="password" name="password" placeholder="กรุณากรอกรหัสผ่าน" formControlName="password" required>
+            </div>
+            <div class="col">
+                <label for="confirmPassword">ยืนยันรหัสผ่าน</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="กรุณายืนยันรหัสผ่าน" formControlName="confirmPassword" required>
+            </div>
+        </div>
+        <div class="button-container">
+            <button type="submit">สมัคร</button>
+            <button type="button" (click)="onCancel()" *ngIf="!registerForm.invalid || !(registerForm.dirty || registerForm.touched)">ยกเลิก</button>
+        </div>
+    </form>
+    <div *ngIf="registerForm.invalid && (registerForm.dirty || registerForm.touched)">
+        <p class="error-message">ข้อมูลฟอร์มไม่ครบถ้วนหรือไม่ถูกต้อง</p>
+    </div>
+    
+    <div *ngIf="registerForm.errors?.['passwordLength']">
+        <p class="error-message">รหัสผ่านต้องมีความยาวอย่างน้อย 8 ตัวอักษร</p>
+    </div>
+</div>

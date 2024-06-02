@@ -1,0 +1,28 @@
+.box {
+  padding: 10px;
+  background-color: rgb(240, 239, 239);
+  border-radius: 5px; /* Adding border-radius for better aesthetics */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for better separation */
+  margin-bottom: 20px; /* Adding margin-bottom for spacing between articles */
+}
+
+.box h5 {
+  font-size: 16px;
+}
+
+.nav-link {
+  color: white !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-size: larger;
+}
+
+.page-footer {
+  background-color: #343a40; /* Matching footer color to the navbar */
+  color: white;
+}

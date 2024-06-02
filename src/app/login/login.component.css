@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://wallpapers.com/images/hd/dark-grey-background-phpf8ys7h4fgijgt.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.form-container {
+    width: 90%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/023/308/048/small_2x/abstract-grey-metallic-overlap-on-dark-circle-mesh-pattern-design-modern-luxury-futuristic-background-vector.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    margin: 10px;
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+}
+
+.form-header {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+}
+
+.form-header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #414141;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 50%;
+}
+
+button:disabled {
+    background-color: #ffffff;
+    cursor: not-allowed;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .form-header h1 {
+        font-size: 1.5em;
+    }
+
+    button {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-header h1 {
+        font-size: 1.2em;
+    }
+
+    button {
+        width: 80%;
+    }
+}
